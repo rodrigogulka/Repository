@@ -1,4 +1,4 @@
-# Portfolio Angular
+# Portfolio Angular - Rodrigo Gulka
 
 Este projeto foi criado usando o [Angular CLI](https://github.com/angular/angular-cli) versão **19.2.13**.
 
