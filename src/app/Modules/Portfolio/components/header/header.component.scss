@@ -1,0 +1,120 @@
+:host {
+  &::before {
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin-bottom: -65px;
+    background: var(--primary);
+  }
+
+  header,
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    img {
+      border-radius: 100px;
+      border: 5px solid var(--white);
+      margin-bottom: 15px;
+    }
+  }
+
+  aside {
+    .descricao {
+      color: var(--white); // ✅ branco
+      background: none !important;
+      text-align: center;
+    }
+
+
+    p {
+      text-align: center;
+      color: var(--primary-010);
+      background: none !important;
+    }
+
+    nav {
+      margin: 20px 0;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        li {
+          a {
+            width: 250px;
+          }
+        }
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap; // Responsividade para telas pequenas
+      gap: 20px;
+      padding: 10px;
+
+      figure {
+        width: 300px;
+        height: 100px;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        background: var(--bg-secondary, #fdfdff);
+        border: 1px solid var(--white);
+        border-radius: 7px;
+        text-align: left;
+
+        img {
+          flex-shrink: 0;
+        }
+
+        figcaption {
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--primary-010);
+
+            strong {
+              color: var(--primary-010);
+              font-size: 16px;
+            }
+
+            p {
+              margin: 3px 0;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Opcional: responsividade adicional
+  @media (max-width: 768px) {
+    aside section {
+      flex-direction: column;
+      align-items: center;
+
+      figure {
+        width: 90%;
+      }
+    }
+  }
+}
